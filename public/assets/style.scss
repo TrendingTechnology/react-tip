@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+#app,
+.app-container {
+  height: 100%;
+}
+
+@import "@/components/style.scss";
+@import "balloon-css";
+
+.app-container {
+  margin: 50px;
+  font-size: 15px;
+  background: #fff;
+  color: #222;
+  font-family: sans-serif;
+
+  button {
+    background: tomato;
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    display: block;
+    // margin: 0 auto 30px;
+  }
+}
