@@ -18,7 +18,6 @@ npm update @feizheng/react-tip
 | title     | String | -       | -           |
 | placement | String | -       | -           |
 
-## placement
 ```json
 [
   "up",
