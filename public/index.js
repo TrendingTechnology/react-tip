@@ -1,6 +1,7 @@
-import ReactTip from '../src/main';
-import ReactDOM from 'react-dom';
+import ReactDemokit from '@jswork/react-demokit';
 import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactTip from '../src/main';
 import './assets/style.scss';
 
 class App extends React.Component {
@@ -16,18 +17,21 @@ class App extends React.Component {
       'down-right'
     ]
   };
+
   render() {
     const { placements } = this.state;
     return (
-      <div className="app-container">
+      <ReactDemokit
+        className="p-3 app-container"
+        url="https://github.com/afeiship/react-tip">
         {placements.map((item) => {
           return (
             <ReactTip key={item} title={`abc.com - ${item}`} placement={item}>
-              <button>Abc.com - {item}</button>
+              <button className="button is-fullwidth is-info">Abc.com - {item}</button>
             </ReactTip>
           );
         })}
-      </div>
+      </ReactDemokit>
     );
   }
 }

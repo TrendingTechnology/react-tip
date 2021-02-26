@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import noop from '@feizheng/noop';
-import objectAssign from 'object-assign';
 
 const CLASS_NAME = 'react-tip';
 
-export default class extends Component {
+export default class ReactTip extends Component {
   static displayName = CLASS_NAME;
   static version = '__VERSION__';
   static propTypes = {
+    /**
+     * The extended className for component.
+     */
     className: PropTypes.string,
+    /**
+     * The tooltip title.
+     */
     title: PropTypes.string,
+    /**
+     * The placement.
+     * https://github.com/kazzkiq/balloon.css
+     */
     placement: PropTypes.oneOf([
       'up',
       'down',
@@ -34,7 +41,7 @@ export default class extends Component {
     return React.cloneElement(children, {
       'aria-label': title,
       'data-balloon-pos': placement,
-      className: classNames(CLASS_NAME,className),
+      'className': classNames(CLASS_NAME, className),
       ...children.props
     });
   }
